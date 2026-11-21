@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#0B1F3A"/>
+  <rect x="32" y="32" width="448" height="448" rx="76" fill="none" stroke="#1D4ED8" stroke-width="6" stroke-opacity="0.45"/>
+  <path d="M120 152c0-13.255 10.745-24 24-24h92c17.673 0 32 14.327 32 32v208c-16-12-36-18-56-18h-68c-13.255 0-24-10.745-24-24V152z" fill="#FFFFFF" fill-opacity="0.96"/>
+  <path d="M392 152c0-13.255-10.745-24-24-24h-92c-17.673 0-32 14.327-32 32v208c16-12 36-18 56-18h68c13.255 0 24-10.745 24-24V152z" fill="#DBEAFE" fill-opacity="0.94"/>
+  <path d="M256 92l88 42-88 42-88-42 88-42z" fill="#3B82F6"/>
+  <path d="M256 176v192" stroke="#0B1F3A" stroke-width="6" stroke-linecap="round"/>
+  <rect x="152" y="388" width="208" height="28" rx="14" fill="#1D4ED8"/>
+  <text x="256" y="407" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="3">AEC INDIA</text>
+</svg>

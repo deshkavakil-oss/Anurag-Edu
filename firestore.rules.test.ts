@@ -1,0 +1,103 @@
+/**
+ * Security Rules Specification Verification Matrix (Dirty Dozen)
+ * Documents expected PERMISSION_DENIED assertions for Firestore Emulator / Rules Unit Testing.
+ */
+
+export const DIRTY_DOZEN_CASES = [
+  {
+    id: 1,
+    name: 'Privilege Escalation on Registration',
+    path: '/users/student_1',
+    operation: 'create',
+    payload: { uid: 'student_1', role: 'admin', fullName: 'Test', email: 'test@example.com', emailVerified: false },
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 2,
+    name: 'Admin Collection Spoofing',
+    path: '/admins/student_1',
+    operation: 'create',
+    payload: { granted: true },
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 3,
+    name: 'Unverified User Note Write',
+    path: '/notes/note_1',
+    operation: 'create',
+    emailVerified: false,
+    payload: { userId: 'student_1', title: 'Test', subject: 'History', noteType: 'personal', content: 'abc' },
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 4,
+    name: 'Cross-User Question History Read',
+    path: '/question_history/victim_q1',
+    operation: 'get',
+    authUid: 'attacker_uid',
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 5,
+    name: 'Blanket Student Profile List Scraping',
+    path: '/student_profiles',
+    operation: 'list',
+    authUid: 'student_1',
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 6,
+    name: 'Shadow Field Injection on Profile Update',
+    path: '/student_profiles/student_1',
+    operation: 'update',
+    payload: { isAdmin: true },
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 7,
+    name: 'Student Auto-Publishing Legal Blog',
+    path: '/blogs/blog_1',
+    operation: 'create',
+    payload: { authorId: 'student_1', status: 'published', title: 'Unauthorized Legal Advice' },
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 8,
+    name: 'Path Variable ID Poisoning',
+    path: `/notes/${'a'.repeat(200)}`,
+    operation: 'create',
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 9,
+    name: 'Parent Progress Global Enumeration',
+    path: '/parent_progress',
+    operation: 'list',
+    authUid: null,
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 10,
+    name: 'Owner Field Mutation on Update',
+    path: '/notes/note_1',
+    operation: 'update',
+    payload: { userId: 'other_student' },
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 11,
+    name: 'Backdated Timestamp Forgery',
+    path: '/quiz_attempts/attempt_1',
+    operation: 'create',
+    payload: { createdAt: '2020-01-01T00:00:00Z' },
+    expected: 'PERMISSION_DENIED',
+  },
+  {
+    id: 12,
+    name: 'Cross-User Conversation Subcollection Write',
+    path: '/conversations/victim_conv/messages/msg_1',
+    operation: 'create',
+    authUid: 'attacker_uid',
+    expected: 'PERMISSION_DENIED',
+  },
+] as const;

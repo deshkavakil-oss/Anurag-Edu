@@ -1,0 +1,328 @@
+{
+  "entities": {
+    "UserAccount": {
+      "title": "UserAccount",
+      "description": "Core authenticated student account and verification metadata",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "fullName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "email": { "type": "string", "format": "email", "maxLength": 160 },
+        "role": { "type": "string", "enum": ["student"] },
+        "emailVerified": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "fullName", "email", "role", "emailVerified", "createdAt", "updatedAt"]
+    },
+    "StudentProfile": {
+      "title": "StudentProfile",
+      "description": "Personal academic profile, exam target, and learning progress summary",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "fullName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "photoUrl": { "type": "string", "maxLength": 500 },
+        "state": { "type": "string", "maxLength": 80 },
+        "city": { "type": "string", "maxLength": 80 },
+        "educationLevel": { "type": "string", "maxLength": 80 },
+        "institution": { "type": "string", "maxLength": 160 },
+        "classOrSemester": { "type": "string", "maxLength": 60 },
+        "course": { "type": "string", "maxLength": 120 },
+        "selectedExam": { "type": "string", "maxLength": 80 },
+        "preferredLanguage": { "type": "string", "enum": ["English", "Hindi", "Simple Hindi", "Bilingual"] },
+        "careerGoals": { "type": "string", "maxLength": 300 },
+        "subjects": { "type": "array" },
+        "xp": { "type": "integer" },
+        "studyStreak": { "type": "integer" },
+        "badges": { "type": "array" },
+        "customSyllabus": { "type": "string", "maxLength": 8000 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "fullName", "state", "city", "educationLevel", "selectedExam", "preferredLanguage", "xp", "studyStreak", "updatedAt"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "AI Student Teacher chat session owned by a verified student",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "subject": { "type": "string", "maxLength": 80 },
+        "exam": { "type": "string", "maxLength": 80 },
+        "language": { "type": "string", "maxLength": 40 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "subject", "exam", "language", "createdAt", "updatedAt"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "Single message inside an AI Teacher conversation",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "role": { "type": "string", "enum": ["user", "assistant"] },
+        "content": { "type": "string", "minLength": 1, "maxLength": 30000 },
+        "status": { "type": "string", "enum": ["pending", "completed", "error"] },
+        "sourceLinks": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "role", "content", "status", "createdAt"]
+    },
+    "QuestionHistory": {
+      "title": "QuestionHistory",
+      "description": "Automatic persistent history of student questions and AI answers",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "conversationId": { "type": "string", "maxLength": 128 },
+        "question": { "type": "string", "minLength": 1, "maxLength": 4000 },
+        "answer": { "type": "string", "maxLength": 30000 },
+        "subject": { "type": "string", "maxLength": 80 },
+        "topic": { "type": "string", "maxLength": 120 },
+        "exam": { "type": "string", "maxLength": 80 },
+        "status": { "type": "string", "enum": ["pending", "completed", "error"] },
+        "isPublic": { "type": "boolean" },
+        "isBookmarked": { "type": "boolean" },
+        "sourceLinks": { "type": "array" },
+        "attachmentName": { "type": "string", "maxLength": 200 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "question", "subject", "exam", "status", "isPublic", "isBookmarked", "createdAt", "updatedAt"]
+    },
+    "PublicQuestion": {
+      "title": "PublicQuestion",
+      "description": "PII-stripped student question explicitly shared to the Public Student Q&A Library",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorAlias": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "isAnonymous": { "type": "boolean" },
+        "question": { "type": "string", "minLength": 3, "maxLength": 4000 },
+        "answer": { "type": "string", "minLength": 1, "maxLength": 30000 },
+        "subject": { "type": "string", "maxLength": 80 },
+        "exam": { "type": "string", "maxLength": 80 },
+        "helpfulCount": { "type": "integer" },
+        "reportedCount": { "type": "integer" },
+        "status": { "type": "string", "enum": ["published", "flagged", "removed"] },
+        "sourceLinks": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorAlias", "isAnonymous", "question", "answer", "subject", "exam", "helpfulCount", "reportedCount", "status", "createdAt"]
+    },
+    "PublicComment": {
+      "title": "PublicComment",
+      "description": "Comment on a published public question or community post",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorAlias": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "text": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorAlias", "text", "createdAt"]
+    },
+    "QuizAttempt": {
+      "title": "QuizAttempt",
+      "description": "Student mock test and MCQ attempt record with real accuracy and weak topic analysis",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "examId": { "type": "string", "maxLength": 80 },
+        "subject": { "type": "string", "maxLength": 80 },
+        "testTitle": { "type": "string", "maxLength": 160 },
+        "questionSource": { "type": "string", "enum": ["pyq", "ai_practice", "curated"] },
+        "totalQuestions": { "type": "integer" },
+        "correctCount": { "type": "integer" },
+        "incorrectCount": { "type": "integer" },
+        "unattemptedCount": { "type": "integer" },
+        "marksObtained": { "type": "number" },
+        "maxMarks": { "type": "number" },
+        "accuracy": { "type": "number" },
+        "timeTakenSeconds": { "type": "integer" },
+        "weakTopics": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "examId", "subject", "testTitle", "questionSource", "totalQuestions", "correctCount", "incorrectCount", "unattemptedCount", "marksObtained", "maxMarks", "accuracy", "timeTakenSeconds", "createdAt"]
+    },
+    "Note": {
+      "title": "Note",
+      "description": "Personal study notes and flashcards saved by a verified student",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 180 },
+        "subject": { "type": "string", "maxLength": 80 },
+        "topic": { "type": "string", "maxLength": 120 },
+        "noteType": { "type": "string", "enum": ["personal", "ai_notes", "formula_sheet", "revision", "flashcards"] },
+        "content": { "type": "string", "minLength": 1, "maxLength": 25000 },
+        "flashcards": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "subject", "noteType", "content", "createdAt", "updatedAt"]
+    },
+    "StudyPlan": {
+      "title": "StudyPlan",
+      "description": "Smart 30/60/90-day study plan with tracked tasks",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "exam": { "type": "string", "maxLength": 80 },
+        "examDate": { "type": "string", "maxLength": 40 },
+        "dailyHours": { "type": "number" },
+        "durationDays": { "type": "integer" },
+        "weakSubjects": { "type": "array" },
+        "tasks": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "exam", "examDate", "dailyHours", "durationDays", "tasks", "createdAt", "updatedAt"]
+    },
+    "Folder": {
+      "title": "Folder",
+      "description": "Student file library folder",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "subject": { "type": "string", "maxLength": 80 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "name", "subject", "createdAt"]
+    },
+    "UploadedFile": {
+      "title": "UploadedFile",
+      "description": "Student digital file metadata and AI extracted summary",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "folderId": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "mimeType": { "type": "string", "maxLength": 120 },
+        "sizeBytes": { "type": "integer" },
+        "subject": { "type": "string", "maxLength": 80 },
+        "textPreview": { "type": "string", "maxLength": 50000 },
+        "extractedSummary": { "type": "string", "maxLength": 15000 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "name", "mimeType", "sizeBytes", "subject", "createdAt"]
+    },
+    "BlogArticle": {
+      "title": "BlogArticle",
+      "description": "Legal or educational blog article (draft or admin-published)",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorName": { "type": "string", "maxLength": 120 },
+        "title": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "slug": { "type": "string", "maxLength": 220 },
+        "category": { "type": "string", "maxLength": 80 },
+        "language": { "type": "string", "maxLength": 30 },
+        "status": { "type": "string", "enum": ["draft", "published"] },
+        "content": { "type": "string", "minLength": 10, "maxLength": 40000 },
+        "references": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorName", "title", "slug", "category", "language", "status", "content", "createdAt", "updatedAt"]
+    },
+    "CommunityPost": {
+      "title": "CommunityPost",
+      "description": "Moderated student community discussion post",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorAlias": { "type": "string", "maxLength": 80 },
+        "group": { "type": "string", "maxLength": 80 },
+        "exam": { "type": "string", "maxLength": 80 },
+        "title": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "body": { "type": "string", "minLength": 3, "maxLength": 6000 },
+        "helpfulCount": { "type": "integer" },
+        "reportedCount": { "type": "integer" },
+        "status": { "type": "string", "enum": ["published", "flagged", "removed"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorAlias", "group", "exam", "title", "body", "helpfulCount", "reportedCount", "status", "createdAt"]
+    },
+    "Bookmark": {
+      "title": "Bookmark",
+      "description": "Saved bookmark for questions, scholarships, videos, alerts, or legal blogs",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "itemType": { "type": "string", "enum": ["question", "blog", "scholarship", "alert", "video", "research"] },
+        "itemId": { "type": "string", "maxLength": 160 },
+        "title": { "type": "string", "maxLength": 220 },
+        "url": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "itemType", "itemId", "title", "createdAt"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "Student notification or email delivery audit record",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "maxLength": 180 },
+        "body": { "type": "string", "maxLength": 2000 },
+        "category": { "type": "string", "maxLength": 60 },
+        "read": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "body", "category", "read", "createdAt"]
+    },
+    "ParentProgress": {
+      "title": "ParentProgress",
+      "description": "Opt-in sanitized progress summary for parents/guardians without private Q&A or files",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "studentName": { "type": "string", "maxLength": 120 },
+        "selectedExam": { "type": "string", "maxLength": 80 },
+        "studyHours": { "type": "number" },
+        "testsTaken": { "type": "integer" },
+        "averageAccuracy": { "type": "number" },
+        "weakTopics": { "type": "array" },
+        "enabled": { "type": "boolean" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "studentName", "selectedExam", "studyHours", "testsTaken", "averageAccuracy", "enabled", "updatedAt"]
+    },
+    "AdminSetting": {
+      "title": "AdminSetting",
+      "description": "Administrator-managed platform announcements and settings",
+      "type": "object",
+      "properties": {
+        "announcementTitle": { "type": "string", "maxLength": 200 },
+        "announcementBody": { "type": "string", "maxLength": 2000 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["announcementTitle", "announcementBody", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": { "schema": { "$ref": "#/entities/UserAccount" }, "description": "Student auth account metadata" },
+    "/student_profiles/{userId}": { "schema": { "$ref": "#/entities/StudentProfile" }, "description": "Student academic profile" },
+    "/conversations/{conversationId}": { "schema": { "$ref": "#/entities/Conversation" }, "description": "AI Teacher conversations" },
+    "/conversations/{conversationId}/messages/{messageId}": { "schema": { "$ref": "#/entities/Message" }, "description": "Conversation messages" },
+    "/question_history/{historyId}": { "schema": { "$ref": "#/entities/QuestionHistory" }, "description": "Saved AI Q&A history" },
+    "/public_questions/{questionId}": { "schema": { "$ref": "#/entities/PublicQuestion" }, "description": "Public Student Q&A Library" },
+    "/public_questions/{questionId}/comments/{commentId}": { "schema": { "$ref": "#/entities/PublicComment" }, "description": "Public Q&A comments" },
+    "/quiz_attempts/{attemptId}": { "schema": { "$ref": "#/entities/QuizAttempt" }, "description": "Mock test & MCQ attempts" },
+    "/notes/{noteId}": { "schema": { "$ref": "#/entities/Note" }, "description": "Student notes and flashcards" },
+    "/study_plans/{planId}": { "schema": { "$ref": "#/entities/StudyPlan" }, "description": "Smart study plans" },
+    "/folders/{folderId}": { "schema": { "$ref": "#/entities/Folder" }, "description": "Student file library folders" },
+    "/uploaded_files/{fileId}": { "schema": { "$ref": "#/entities/UploadedFile" }, "description": "Student uploaded files" },
+    "/blogs/{blogId}": { "schema": { "$ref": "#/entities/BlogArticle" }, "description": "Student & admin legal/educational blogs" },
+    "/community_posts/{postId}": { "schema": { "$ref": "#/entities/CommunityPost" }, "description": "Moderated student community posts" },
+    "/community_posts/{postId}/comments/{commentId}": { "schema": { "$ref": "#/entities/PublicComment" }, "description": "Community post replies" },
+    "/bookmarks/{bookmarkId}": { "schema": { "$ref": "#/entities/Bookmark" }, "description": "User bookmarks" },
+    "/notifications/{notificationId}": { "schema": { "$ref": "#/entities/Notification" }, "description": "User notifications" },
+    "/parent_progress/{shareCode}": { "schema": { "$ref": "#/entities/ParentProgress" }, "description": "Opt-in parent progress snapshot" },
+    "/admin_settings/{docId}": { "schema": { "$ref": "#/entities/AdminSetting" }, "description": "Admin announcements and config" }
+  }
+}

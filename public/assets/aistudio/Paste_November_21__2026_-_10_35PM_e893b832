@@ -1,0 +1,1529 @@
+# MASTER DEVELOPMENT PROMPT
+# ANURAG EDUCATION CENTER
+## India's Complete AI-Powered Education, Government Exam Preparation, Research & Legal Learning Platform
+
+Build a complete, professional, production-ready, full-stack web application named:
+
+**ANURAG EDUCATION CENTER**
+
+Brand abbreviation: AEC
+
+Official tagline:
+**LEARN • RESEARCH • PRACTICE • SUCCEED**
+
+Official contact email:
+anurag706879@gmail.com
+
+Primary target audience:
+Students throughout India, including school students, college students, university students, competitive examination aspirants, law students, researchers and professionals.
+
+MAIN OBJECTIVE:
+
+Create one powerful digital education platform where a student can register using a real email address, create a personal profile, study any subject, prepare for government examinations, ask AI questions, receive detailed solutions, find educational articles, take mock tests, save notes, upload documents, access legal education and maintain a complete personal learning history.
+
+IMPORTANT:
+This must be a real, functional full-stack application, not merely a static website or UI demonstration.
+
+Do not use fake students, fake registrations, fake question records, fake test results, fake articles, fake emails or fake success messages.
+
+==================================================
+PART 1. BRANDING AND WEBSITE IDENTITY
+==================================================
+
+Website name:
+ANURAG EDUCATION CENTER
+
+Short name:
+AEC
+
+Tagline:
+LEARN • RESEARCH • PRACTICE • SUCCEED
+
+Create a professional academic brand identity.
+
+Design requirements:
+- Premium educational website.
+- Navy blue and white primary colors.
+- Royal blue highlights.
+- Light grey backgrounds.
+- Professional typography.
+- Modern educational icons.
+- Clean navigation.
+- Responsive mobile and desktop design.
+- Light and dark themes.
+- Professional logo featuring education, books and knowledge.
+
+Create:
+- Homepage.
+- About Us.
+- Contact Us.
+- Privacy Policy.
+- Terms and Conditions.
+- Disclaimer.
+- Help Centre.
+- Student Login.
+- Student Registration.
+
+Use the brand name consistently across the application, browser title, dashboard, login, footer and notifications.
+
+==================================================
+PART 2. COMPLETE STUDENT REGISTRATION
+==================================================
+
+Create a genuine user registration and authentication system.
+
+Registration fields:
+1. Full name.
+2. Email address.
+3. Password.
+4. Confirm password.
+5. State.
+6. City.
+7. Education level.
+8. School or college.
+9. Course.
+10. Selected examination.
+11. Preferred language.
+
+Authentication features:
+- Email and password registration.
+- Real email verification.
+- Google Sign-In.
+- Login and logout.
+- Forgot password.
+- Password reset.
+- Account security.
+- Profile editing.
+- Session management.
+
+OFFICIAL EMAIL IDENTITY:
+
+anurag706879@gmail.com
+
+Use this as the intended official platform email address for:
+- Welcome emails.
+- Email verification.
+- Registration confirmation.
+- Password reset.
+- Important student notifications.
+- Educational announcements.
+
+Email requirements:
+- Use Firebase Authentication email verification where available.
+- Use a properly configured transactional email provider for branded emails.
+- Verify ownership and sending authorization for the sender address.
+- Never expose Gmail passwords, App Passwords, OAuth secrets or API credentials in frontend code.
+- Show actual email sending status.
+- Never claim an email was delivered without confirmation.
+
+Allow only verified students to use protected personal learning features.
+
+==================================================
+PART 3. STUDENT PROFILE AND PERSONAL DASHBOARD
+==================================================
+
+Every registered student must have an individual account.
+
+Student profile:
+- Name.
+- Profile picture.
+- Email verification status.
+- State.
+- City.
+- School/College/University.
+- Education level.
+- Class or semester.
+- Course.
+- Subjects.
+- Selected examination.
+- Career goals.
+- Preferred language.
+- Learning interests.
+
+Create a personalized student dashboard.
+
+Dashboard sections:
+- Welcome message.
+- AI Teacher.
+- Government Exam Preparation.
+- My Questions.
+- My Answers.
+- My Notes.
+- My Files.
+- My Blogs.
+- My Courses.
+- My Mock Tests.
+- My Study Planner.
+- Research Library.
+- Legal Education.
+- Career Guidance.
+- Scholarship Finder.
+- Learning Progress.
+- Notifications.
+
+All dashboard information must come from real user-specific database records.
+
+==================================================
+PART 4. COMPLETE GOVERNMENT EXAM PREPARATION CENTRE
+==================================================
+
+Create a separate, dedicated Government Exam Preparation section.
+
+This is one of the most important parts of the platform.
+
+Create individual examination pages.
+
+A. SSC EXAMINATIONS
+
+- SSC CHSL.
+- SSC CGL.
+- SSC MTS.
+- SSC GD.
+- SSC CPO.
+- SSC Stenographer.
+- SSC Selection Post.
+
+B. RAILWAY EXAMINATIONS
+
+- RRB NTPC.
+- RRB Group D.
+- RRB ALP.
+- RRB Technician.
+- Railway JE.
+
+C. BANKING EXAMINATIONS
+
+- IBPS PO.
+- IBPS Clerk.
+- SBI PO.
+- SBI Clerk.
+- RBI Assistant.
+- RBI Grade B.
+
+D. CIVIL SERVICES
+
+- UPSC Civil Services.
+- State PSC.
+- BPSC.
+- WBCS.
+- UPPSC.
+- JPSC.
+- Other State Public Service Commission examinations.
+
+E. POLICE EXAMINATIONS
+
+- State Police Constable.
+- Police SI.
+- SSC GD.
+- Other state police recruitment examinations.
+
+F. DEFENCE EXAMINATIONS
+
+- NDA.
+- CDS.
+- AFCAT.
+- Agniveer.
+- Other defence examinations.
+
+G. OTHER EXAMINATIONS
+
+- CTET.
+- State TET.
+- CUET.
+- UGC NET.
+- Other government recruitment examinations.
+
+Every examination must have its own page containing:
+- Introduction.
+- Eligibility.
+- Official syllabus.
+- Examination pattern.
+- Selection process.
+- Subjects.
+- Study material.
+- Practice questions.
+- Previous year papers.
+- Mock tests.
+- Current affairs.
+- Important dates.
+- Official notifications.
+- Admit card links.
+- Result links.
+- Preparation progress.
+
+Verify examination details using official notifications.
+
+Never assume that all examinations have the same syllabus or marking pattern.
+
+==================================================
+PART 5. COMPLETE SSC CHSL PREPARATION PORTAL
+==================================================
+
+Create a dedicated SSC CHSL preparation website section inside ANURAG EDUCATION CENTER.
+
+Page title:
+
+SSC CHSL – COMPLETE ONLINE PREPARATION CENTRE
+
+Create separate pages for all subjects.
+
+1. HISTORY
+
+- Ancient Indian History.
+- Medieval Indian History.
+- Modern Indian History.
+- Indian Freedom Movement.
+- World History.
+- Important Historical Events.
+- Important Historical Personalities.
+
+2. GEOGRAPHY
+
+- Indian Geography.
+- World Geography.
+- Physical Geography.
+- Rivers.
+- Mountains.
+- Climate.
+- Agriculture.
+- Natural Resources.
+- Indian States and Geography.
+
+3. MATHEMATICS / QUANTITATIVE APTITUDE
+
+- Number System.
+- Simplification.
+- Percentage.
+- Profit and Loss.
+- Simple Interest.
+- Compound Interest.
+- Ratio and Proportion.
+- Average.
+- Time and Work.
+- Time, Speed and Distance.
+- Algebra.
+- Geometry.
+- Mensuration.
+- Trigonometry.
+- Data Interpretation.
+
+4. REASONING
+
+- Analogy.
+- Classification.
+- Coding and Decoding.
+- Number Series.
+- Alphabet Series.
+- Blood Relations.
+- Direction Test.
+- Ranking.
+- Syllogism.
+- Venn Diagrams.
+- Puzzles.
+- Verbal Reasoning.
+- Non-Verbal Reasoning.
+- Figure Classification.
+
+5. CURRENT AFFAIRS
+
+- Daily Current Affairs.
+- Weekly Current Affairs.
+- Monthly Current Affairs.
+- National News.
+- International News.
+- Government Schemes.
+- Awards.
+- Sports.
+- Important Appointments.
+- Science and Technology.
+- Important Days.
+- Economy.
+- Summits.
+
+6. INDIAN POLITY
+
+- Indian Constitution.
+- Preamble.
+- Fundamental Rights.
+- Fundamental Duties.
+- Directive Principles.
+- President.
+- Vice President.
+- Prime Minister.
+- Parliament.
+- Supreme Court.
+- High Courts.
+- Constitutional Articles.
+- Constitutional Amendments.
+- Election Commission.
+- Panchayati Raj.
+
+7. GENERAL SCIENCE
+
+- Physics.
+- Chemistry.
+- Biology.
+- Human Body.
+- Scientific Discoveries.
+
+8. GENERAL AWARENESS
+
+- Static GK.
+- Books and Authors.
+- Important Places.
+- National Parks.
+- Capitals and Currencies.
+- Important Organizations.
+
+9. ENGLISH LANGUAGE
+
+- Grammar.
+- Vocabulary.
+- Synonyms.
+- Antonyms.
+- Idioms and Phrases.
+- One Word Substitution.
+- Error Detection.
+- Sentence Improvement.
+- Reading Comprehension.
+- Cloze Test.
+
+10. COMPUTER KNOWLEDGE
+
+- Computer Fundamentals.
+- Hardware.
+- Software.
+- Internet.
+- Networking.
+- MS Office.
+- Cyber Security.
+- Digital Awareness.
+
+Every subject must include:
+- Chapter-wise study material.
+- Topic-wise notes.
+- MCQ questions.
+- Previous year questions.
+- Practice sets.
+- Short tricks.
+- Detailed explanations.
+- Important questions.
+- Revision notes.
+- Progress tracking.
+
+Use the latest verified official SSC CHSL syllabus and examination pattern.
+
+==================================================
+PART 6. AI STUDENT TEACHER
+==================================================
+
+Create a powerful AI-powered personal teacher using Google Gemini.
+
+Students should be able to ask questions about any subject.
+
+Supported categories:
+- History.
+- Geography.
+- Mathematics.
+- Reasoning.
+- Current Affairs.
+- Polity.
+- Science.
+- English.
+- Computer.
+- General Knowledge.
+- Law.
+- School subjects.
+- College subjects.
+- Competitive examinations.
+- Research.
+- Career guidance.
+
+AI answer format:
+
+1. Direct answer.
+2. Simple explanation.
+3. Detailed explanation.
+4. Step-by-step solution.
+5. Practical examples.
+6. Important facts.
+7. Exam-oriented points.
+8. Related MCQs.
+9. Further reading.
+10. Verified references and source links.
+
+Language:
+- Hindi.
+- English.
+- Simple Hindi.
+- Bilingual explanations.
+
+Allow follow-up questions.
+
+Add:
+- New Chat.
+- Previous Chats.
+- Regenerate Answer.
+- Copy Answer.
+- Save Answer.
+- Download PDF.
+- Bookmark.
+- Search Chat History.
+- Delete Conversation.
+- Report Incorrect Answer.
+
+==================================================
+PART 7. AI PERSONAL LEARNING MEMORY
+==================================================
+
+Create a personalized learning memory for every registered student.
+
+AI should understand:
+- What the student has studied.
+- Which questions were asked.
+- Which topics were difficult.
+- Which questions were answered incorrectly.
+- Which topics need revision.
+- Which examination the student is preparing for.
+
+Use saved learning records to personalize future lessons.
+
+Do not assume the student has mastered a topic merely because they opened it.
+
+==================================================
+PART 8. AUTOMATIC QUESTION HISTORY
+==================================================
+
+Every student question and successful AI answer must be saved automatically.
+
+Store:
+- User ID.
+- Conversation ID.
+- Question.
+- AI answer.
+- Subject.
+- Topic.
+- Examination.
+- Source links.
+- Date and time.
+- Private/public status.
+- Attached document references.
+
+Create:
+- My Question History.
+- My Answers.
+- Saved Questions.
+- Search History.
+- Filter by Subject.
+- Filter by Examination.
+- Filter by Date.
+- Reopen Previous Conversations.
+
+History must remain available after logout and login on another device.
+
+Save questions with pending status before AI processing.
+
+Do not duplicate questions when retrying failed API calls.
+
+==================================================
+PART 9. PUBLIC STUDENT QUESTION AND ANSWER LIBRARY
+==================================================
+
+Create a public educational knowledge-sharing platform.
+
+Students must have two options:
+
+1. Keep My Question Private.
+2. Share My Question with Students.
+
+Only publish content when the student explicitly chooses to share it.
+
+Public question categories:
+- SSC CHSL.
+- SSC CGL.
+- Railway.
+- Banking.
+- UPSC.
+- History.
+- Geography.
+- Mathematics.
+- Reasoning.
+- Current Affairs.
+- Polity.
+- Science.
+- English.
+- General Knowledge.
+- Legal Studies.
+
+Public Q&A features:
+- Read previous questions.
+- Read AI explanations.
+- Search questions.
+- Filter by subject.
+- Filter by examination.
+- Bookmark.
+- Helpful votes.
+- Comments.
+- Report incorrect answers.
+- Anonymous sharing option.
+
+Remove personal information before publishing.
+
+Never automatically publish private conversations, emails, uploaded files or personal information.
+
+==================================================
+PART 10. MCQ, MOCK TEST AND EXAMINATION SYSTEM
+==================================================
+
+Create a complete examination practice engine.
+
+Features:
+- Daily 10 MCQs.
+- Daily 25 MCQs.
+- Daily 50 MCQs.
+- Subject-wise MCQs.
+- Chapter-wise MCQs.
+- Topic-wise MCQs.
+- Full-length mock tests.
+- Sectional tests.
+- Timed examinations.
+- Previous year question practice.
+- Negative marking according to the selected examination.
+
+Results must show:
+- Total Questions.
+- Correct Answers.
+- Incorrect Answers.
+- Unattempted Questions.
+- Total Marks.
+- Accuracy.
+- Time Taken.
+- Subject-wise Performance.
+- Weak Topics.
+
+Provide detailed explanations after tests.
+
+Clearly distinguish AI-generated practice questions from actual previous-year questions.
+
+Create real student performance records.
+
+==================================================
+PART 11. CURRENT AFFAIRS CENTRE
+==================================================
+
+Create a dedicated Current Affairs portal.
+
+Features:
+- Daily News.
+- Weekly Current Affairs.
+- Monthly Current Affairs.
+- National Affairs.
+- International Affairs.
+- Government Schemes.
+- Awards.
+- Sports.
+- Appointments.
+- Economy.
+- Science and Technology.
+- Important Days.
+- International Organizations.
+
+Every entry must include:
+- Date.
+- Headline.
+- Short explanation.
+- Detailed explanation.
+- Exam relevance.
+- Important facts.
+- Related MCQs.
+- Original source link.
+
+Use verified and reliable sources.
+
+Prefer official government sources.
+
+Never fabricate current events, publication dates or source links.
+
+Display the last verification date.
+
+==================================================
+PART 12. SMART STUDY PLANNER
+==================================================
+
+Create an intelligent study timetable system.
+
+Allow students to select:
+- Examination.
+- Exam date.
+- Available daily study hours.
+- Subjects.
+- Preparation level.
+- Weak subjects.
+
+Generate:
+- 30-day study plan.
+- 60-day study plan.
+- 90-day study plan.
+- Daily timetable.
+- Weekly goals.
+- Revision schedule.
+- Practice schedule.
+- Mock test schedule.
+
+Allow students to edit and save plans.
+
+Track completed and pending tasks.
+
+==================================================
+PART 13. SMART REVISION AND WEAKNESS DETECTOR
+==================================================
+
+Analyze actual test results.
+
+Identify weak topics and subjects.
+
+Recommend:
+- Revision lessons.
+- Practice questions.
+- Additional explanations.
+- Flashcards.
+- Topic-wise tests.
+
+Implement spaced repetition so difficult topics are scheduled for revision.
+
+Show actual student progress rather than invented scores.
+
+==================================================
+PART 14. DAILY MISSIONS AND REWARDS
+==================================================
+
+Create a learning gamification system.
+
+Features:
+- Daily study goals.
+- Daily MCQ missions.
+- Revision missions.
+- Study streaks.
+- XP points.
+- Achievement badges.
+- Weekly challenges.
+- Learning milestones.
+- Leaderboards.
+
+Reward genuine learning activity.
+
+Do not encourage excessive screen time.
+
+==================================================
+PART 15. QUIZ BATTLE AND STUDENT COMPETITION
+==================================================
+
+Create an optional real-time multiplayer Quiz Battle.
+
+Features:
+- Create quiz room.
+- Join quiz room.
+- Invite another student.
+- Timed questions.
+- Live scores.
+- Match results.
+- Subject selection.
+- Difficulty selection.
+- Rankings.
+
+Use a suitable real-time backend.
+
+Do not display fake opponents or pretend a multiplayer game is live when it is not.
+
+==================================================
+PART 16. PHOTO QUESTION SOLVER
+==================================================
+
+Allow students to:
+- Upload a question image.
+- Capture a photo using a mobile device.
+- Extract text.
+- Ask AI to solve the question.
+- Receive step-by-step explanations.
+- Ask follow-up questions.
+
+Support mathematical equations, diagrams and educational images where the AI model supports them.
+
+Allow students to correct incorrectly recognized text.
+
+==================================================
+PART 17. VOICE LEARNING ASSISTANT
+==================================================
+
+Create a voice-based AI learning assistant.
+
+Features:
+- Voice input.
+- Speech recognition.
+- Text-to-speech.
+- Hindi support.
+- English support.
+- Additional Indian languages when supported.
+
+Students should be able to speak questions and hear explanations.
+
+==================================================
+PART 18. COMPLETE INDIAN EDUCATION SYSTEM
+==================================================
+
+Create separate educational categories.
+
+SCHOOL EDUCATION:
+- Class 1 to 12.
+- CBSE.
+- ICSE.
+- State Boards.
+- NCERT.
+
+UNDERGRADUATE:
+- BA.
+- BSc.
+- BCom.
+- BBA.
+- BCA.
+- BA LLB.
+- BTech.
+- MBBS.
+- BEd.
+
+POSTGRADUATE:
+- MA.
+- MSc.
+- MCom.
+- MBA.
+- MCA.
+- LLM.
+- MTech.
+
+OTHER EDUCATION:
+- Coding.
+- Programming.
+- Computer Skills.
+- Artificial Intelligence.
+- English Communication.
+- Research Methodology.
+- Professional Skills.
+- Career Development.
+
+Allow students to select their university and upload their own syllabus.
+
+Do not claim a syllabus is official unless verified.
+
+==================================================
+PART 19. COMPLETE LEGAL EDUCATION CENTRE
+==================================================
+
+Create a separate professional Indian Legal Education Centre.
+
+Include:
+
+1. Indian Constitution.
+2. Constitutional Law.
+3. Bharatiya Nyaya Sanhita (BNS).
+4. Bharatiya Nagarik Suraksha Sanhita (BNSS).
+5. Bharatiya Sakshya Adhiniyam (BSA).
+6. Indian Penal Code (IPC).
+7. Code of Criminal Procedure (CrPC).
+8. Indian Evidence Act.
+9. Civil Procedure Code.
+10. Contract Act.
+11. Transfer of Property Act.
+12. Hindu Law.
+13. Muslim Law.
+14. Family Law.
+15. Domestic Violence Act.
+16. Dowry Prohibition Act.
+17. Cyber Law.
+18. IT Act.
+19. Consumer Protection Act.
+20. Company Law.
+21. Labour Law.
+22. Administrative Law.
+23. Environmental Law.
+24. Property Law.
+25. Law of Torts.
+26. Jurisprudence.
+
+Legal learning features:
+- Section-wise explanations.
+- Case law search.
+- Supreme Court judgments.
+- High Court judgments.
+- Legal research.
+- Legal notes.
+- Legal MCQs.
+- Judiciary preparation.
+- AIBE preparation.
+- Legal drafting education.
+- Court procedure education.
+- Old and new law comparisons.
+
+Prioritize:
+- India Code.
+- Supreme Court of India.
+- eCourts.
+- Official High Court websites.
+- Other recognized official legal sources.
+
+Legal accuracy requirements:
+- Verify current legislation.
+- Identify repealed and amended provisions.
+- Show source links.
+- Never fabricate case citations.
+- Never invent court judgments.
+- Clearly distinguish legal education from professional legal advice.
+
+==================================================
+PART 20. 100+ LEGAL BLOG LIBRARY
+==================================================
+
+Create an initial collection of at least 100 distinct Indian legal education blog topics and articles.
+
+Categories:
+- Criminal Law.
+- Civil Law.
+- Cyber Law.
+- Family Law.
+- Constitutional Law.
+- Property Law.
+- Consumer Law.
+- Labour Law.
+- Court Procedures.
+- BNS.
+- BNSS.
+- BSA.
+- Legal Awareness.
+- Judiciary Preparation.
+
+Each article should contain:
+- Unique title.
+- Category.
+- SEO-friendly slug.
+- Introduction.
+- Detailed explanation.
+- Headings.
+- Examples.
+- Relevant provisions.
+- Verified references.
+- Conclusion.
+- Meta title.
+- Meta description.
+- Keywords.
+- Creation date.
+- Draft or Published status.
+
+Create a professional Blog Library.
+
+==================================================
+PART 21. AI BLOG GENERATOR
+==================================================
+
+Create a complete Blog Generator.
+
+Allow users to:
+- Enter a topic.
+- Select category.
+- Select Hindi or English.
+- Select short, medium or detailed article.
+- Select target audience.
+- Generate article.
+- Edit article.
+- Save article.
+- Download PDF.
+- Publish article if authorized.
+
+When a blog is saved, it must automatically appear in:
+- My Blogs.
+- Blog Library.
+- Relevant category.
+- Dashboard recent blogs.
+
+Do not lose saved articles.
+
+Do not automatically publish unverified legal content.
+
+==================================================
+PART 22. RESEARCH AND ARTICLE FINDER
+==================================================
+
+Create an AI Research Assistant.
+
+Find:
+- Educational articles.
+- Research papers.
+- Government reports.
+- University resources.
+- Academic journals.
+- Official PDFs.
+- Educational websites.
+- Legal judgments.
+- Relevant examination resources.
+
+For each result display:
+- Title.
+- Publisher.
+- Publication date.
+- Short summary.
+- Original source URL.
+- Why it is useful.
+
+Use actual search results.
+
+Never invent article titles, authors, URLs, citations or research papers.
+
+Clearly distinguish AI-generated explanations from original published sources.
+
+==================================================
+PART 23. DIGITAL STUDENT FILE LIBRARY
+==================================================
+
+Create a complete personal document management system.
+
+Supported file types:
+- PDF.
+- DOC.
+- DOCX.
+- PPT.
+- PPTX.
+- XLS.
+- XLSX.
+- TXT.
+- CSV.
+- JPG.
+- JPEG.
+- PNG.
+- WEBP.
+
+Features:
+- Upload.
+- Preview.
+- Download.
+- Rename.
+- Delete.
+- Folder creation.
+- Subject-wise organization.
+- Search.
+- Document summarization.
+- AI document analysis.
+- Ask questions about uploaded files.
+- Generate revision notes.
+
+Protect private files using secure user-specific permissions.
+
+Validate file type and file size.
+
+==================================================
+PART 24. STUDY NOTES AND FLASHCARDS
+==================================================
+
+Create:
+- Personal notes.
+- AI-generated notes.
+- Chapter-wise notes.
+- Subject-wise notes.
+- Short notes.
+- Detailed notes.
+- Revision notes.
+- Formula sheets.
+- Vocabulary lists.
+- Important definitions.
+- Flashcards.
+- PDF exports.
+
+Allow students to save, edit and organize notes.
+
+==================================================
+PART 25. CAREER GUIDANCE CENTRE
+==================================================
+
+Create an AI Career Guidance system.
+
+Features:
+- Career suggestions.
+- Course comparison.
+- College guidance.
+- Higher education guidance.
+- Skill assessment.
+- Career roadmaps.
+- Entrance examination information.
+- Professional development.
+- Interview preparation.
+
+Personalize recommendations based on the student's education and interests.
+
+==================================================
+PART 26. SCHOLARSHIP FINDER
+==================================================
+
+Create an Indian Scholarship Finder.
+
+Include:
+- Central Government Scholarships.
+- State Government Scholarships.
+- Private Scholarships.
+- University Scholarships.
+- Merit-based Scholarships.
+- Need-based Scholarships.
+
+Show:
+- Eligibility.
+- Required documents.
+- Application process.
+- Last date.
+- Official application link.
+- Last verification date.
+
+Never invent scholarship opportunities or deadlines.
+
+==================================================
+PART 27. GOVERNMENT EDUCATION AND JOB ALERTS
+==================================================
+
+Create an official notification centre.
+
+Include:
+- Government job notifications.
+- Examination application dates.
+- Admit cards.
+- Results.
+- Answer keys.
+- Government education schemes.
+- Admission notices.
+- Entrance examinations.
+
+Use official websites and verified sources.
+
+Allow students to bookmark opportunities and receive notifications.
+
+Do not show unverified dates as confirmed.
+
+==================================================
+PART 28. VIDEO LEARNING CENTRE
+==================================================
+
+Create an educational video discovery section.
+
+Features:
+- Subject-wise video search.
+- YouTube educational lectures.
+- Topic-wise playlists.
+- Saved videos.
+- Recommended lessons.
+- Learning resources.
+
+Never invent YouTube video links.
+
+==================================================
+PART 29. STUDENT COMMUNITY
+==================================================
+
+Create a moderated student community.
+
+Features:
+- Subject-wise discussion.
+- Examination-specific groups.
+- Public questions.
+- Student answers.
+- Study material sharing.
+- Discussion comments.
+- Helpful votes.
+- Report abuse.
+- Community moderation.
+
+Protect student privacy.
+
+==================================================
+PART 30. AI INTERVIEW AND VIVA PRACTICE
+==================================================
+
+Create an AI Interview Practice Centre.
+
+Include:
+- Government job interview preparation.
+- College viva.
+- English speaking.
+- Communication skills.
+- Personality development.
+- Subject knowledge interviews.
+
+Provide constructive feedback and improvement suggestions.
+
+==================================================
+PART 31. PARENT PROGRESS DASHBOARD
+==================================================
+
+Create an optional parent/guardian dashboard.
+
+Allow students to grant limited access to selected progress information.
+
+Show:
+- Study hours.
+- Test scores.
+- Completed learning goals.
+- Subject-wise progress.
+- Preparation milestones.
+
+Never expose private questions, conversations or personal documents by default.
+
+Apply age-appropriate consent and safeguards.
+
+==================================================
+PART 32. LOW-DATA AND OFFLINE LEARNING
+==================================================
+
+Optimize the website for Indian students with slower internet connections.
+
+Features:
+- Fast loading.
+- Compressed images.
+- Responsive mobile interface.
+- PWA support.
+- Offline reading of previously downloaded materials.
+- Offline notes where supported.
+- Automatic sync when connectivity returns.
+
+Clearly show offline status and pending synchronization.
+
+==================================================
+PART 33. ADMIN CONTROL PANEL
+==================================================
+
+Create a secure administrator dashboard.
+
+Admin features:
+- View registered users.
+- Manage user accounts.
+- Manage examination categories.
+- Manage SSC CHSL subjects.
+- Manage study materials.
+- Manage blogs.
+- Manage public questions.
+- Moderate community.
+- Manage research resources.
+- Manage announcements.
+- Manage notification settings.
+- View platform analytics.
+- Manage email configuration.
+- Manage AI settings.
+
+Only authorized administrators can access the Admin Panel.
+
+Never allow students to assign themselves administrator permissions.
+
+==================================================
+PART 34. DATABASE ARCHITECTURE
+==================================================
+
+Use Firebase Authentication and Cloud Firestore.
+
+Create suitable collections:
+
+users
+student_profiles
+conversations
+messages
+question_history
+public_questions
+public_answers
+saved_answers
+bookmarks
+exam_categories
+exam_syllabuses
+subjects
+topics
+mcq_questions
+mock_tests
+quiz_attempts
+current_affairs
+blogs
+blog_categories
+research_articles
+uploaded_files
+folders
+notes
+study_plans
+study_progress
+scholarships
+courses
+community_posts
+community_comments
+notifications
+email_logs
+admin_settings
+
+Use:
+- User-specific document ownership.
+- Server timestamps.
+- Pagination.
+- Database indexes.
+- Data validation.
+- Secure Firestore rules.
+- Secure file storage rules.
+
+Private student information must only be accessible to the owner and appropriately authorized administrators.
+
+Published educational articles and public questions can be readable by other students.
+
+==================================================
+PART 35. TECHNOLOGY AND INTEGRATION
+==================================================
+
+Use the following technology stack where supported:
+
+Frontend:
+- React.
+- TypeScript.
+- Modern responsive UI.
+- Reusable components.
+
+Backend:
+- Node.js.
+- Secure server-side API routes.
+
+AI:
+- Google Gemini API.
+- Context-aware AI responses.
+- Hindi and English support.
+- Image understanding.
+- Document understanding.
+
+Database:
+- Firebase Firestore.
+
+Authentication:
+- Firebase Authentication.
+
+File Storage:
+- Firebase Storage.
+
+Search:
+- Supported Google Search grounding or an appropriate search provider.
+
+Email:
+- Firebase Authentication email services.
+- Secure transactional email service for branded emails.
+
+Hosting:
+- Use the available existing deployment or selected hosting platform.
+
+IMPORTANT:
+Keep API credentials on the server side.
+
+Do not hardcode secrets in frontend code or public GitHub repositories.
+
+Use supported models and verify model availability.
+
+==================================================
+PART 36. GEMINI API ERROR HANDLING
+==================================================
+
+Implement robust AI error handling.
+
+Handle:
+- 503 UNAVAILABLE.
+- 429 RESOURCE EXHAUSTED.
+- 500 INTERNAL.
+- 502 BAD GATEWAY.
+- Network errors.
+- Authentication errors.
+
+Implement exponential backoff with jitter.
+
+Maximum three automatic retries.
+
+Use a secondary Gemini model only if it is explicitly configured and verified.
+
+Do not retry invalid credentials indefinitely.
+
+Save pending questions before sending them to the AI.
+
+Do not duplicate messages when retrying.
+
+Show a friendly Hindi error:
+
+"अभी AI सेवा पर अधिक लोड है। कृपया कुछ समय बाद दोबारा प्रयास करें। आपका प्रश्न सुरक्षित रखा गया है।"
+
+Provide a Retry button.
+
+Never display raw API error JSON to students.
+
+==================================================
+PART 37. SECURITY AND STUDENT PRIVACY
+==================================================
+
+Implement:
+- Secure authentication.
+- Firestore security rules.
+- Secure file access.
+- Role-based permissions.
+- Input validation.
+- Rate limiting.
+- Spam protection.
+- Safe public sharing.
+- Account deletion.
+- Data export.
+- Privacy settings.
+- Age-appropriate protections.
+- Content moderation.
+
+Never expose:
+- Passwords.
+- API keys.
+- Private emails.
+- Personal files.
+- Private conversations.
+
+Do not publicly share student information without explicit permission.
+
+==================================================
+PART 38. COMPLETE WEBSITE DESIGN
+==================================================
+
+Create a premium professional interface.
+
+Main homepage sections:
+
+1. Hero section.
+2. Student Login and Registration.
+3. Ask AI Teacher.
+4. Government Exam Preparation.
+5. SSC CHSL Preparation.
+6. SSC CGL Preparation.
+7. Railway Preparation.
+8. Banking Preparation.
+9. UPSC and State PSC.
+10. General Education.
+11. Legal Education Centre.
+12. Research Centre.
+13. Student Question Library.
+14. Mock Test Centre.
+15. Current Affairs.
+16. Free Study Materials.
+17. Career Guidance.
+18. Scholarship Finder.
+19. Latest Legal Blogs.
+20. Student Community.
+21. Contact and Footer.
+
+Make the website easy for beginners.
+
+Use clear Hindi and English language options.
+
+Ensure all buttons and navigation elements have real working functionality.
+
+==================================================
+PART 39. REQUIRED FUNCTIONAL TESTING
+==================================================
+
+Before declaring the application complete, test:
+
+1. Student registration.
+2. Real email verification.
+3. Login.
+4. Logout.
+5. Password recovery.
+6. Student profile creation.
+7. Profile editing.
+8. SSC CHSL dashboard.
+9. History subject page.
+10. Geography subject page.
+11. Mathematics question solving.
+12. Reasoning practice.
+13. Current Affairs page.
+14. Polity practice.
+15. English practice.
+16. AI question answering.
+17. Automatic private question history.
+18. Public question sharing with consent.
+19. Public question search.
+20. MCQ tests.
+21. Mock examinations.
+22. Results and performance reports.
+23. Study plan creation.
+24. Notes generation.
+25. PDF upload.
+26. Document analysis.
+27. Legal education pages.
+28. Legal blog library.
+29. Blog generation and saving.
+30. Research source links.
+31. Scholarship finder.
+32. Email notifications.
+33. Cross-device history access.
+34. Private data access protection.
+35. Mobile responsiveness.
+36. Gemini error recovery.
+37. Admin permissions.
+
+Fix errors before production deployment.
+
+==================================================
+PART 40. IMPLEMENTATION AND BUILD STRATEGY
+==================================================
+
+Build the project in the following development order.
+
+PHASE 1:
+Brand identity, homepage, navigation and responsive design.
+
+PHASE 2:
+Firebase Authentication, email verification, student profiles and database.
+
+PHASE 3:
+AI Teacher, Gemini integration, conversations and automatic question history.
+
+PHASE 4:
+Government Exam Preparation Centre and dedicated SSC CHSL portal.
+
+PHASE 5:
+All SSC CHSL subjects, MCQs, mock tests and performance tracking.
+
+PHASE 6:
+Public Student Q&A Library and community.
+
+PHASE 7:
+Current Affairs, Study Planner, Smart Revision and Daily Missions.
+
+PHASE 8:
+Complete General Education and Legal Education.
+
+PHASE 9:
+100+ Legal Blogs, Blog Generator and Research Centre.
+
+PHASE 10:
+Digital File Library, Document Analysis, Notes and Flashcards.
+
+PHASE 11:
+Career Guidance, Scholarship Finder, Government Alerts and Video Learning.
+
+PHASE 12:
+Voice Assistant, Quiz Battle, Interview Practice and Parent Dashboard.
+
+PHASE 13:
+Admin Panel, security, complete testing and deployment.
+
+IMPORTANT BUILD RULES:
+
+- Start implementing the application, not just explaining how to build it.
+- Create real pages and working routes.
+- Connect all pages to their proper data sources.
+- Preserve data between sessions.
+- Do not create fake placeholder functionality.
+- Do not remove previously implemented working features.
+- Do not create another deployment if the existing project is being reused.
+- If a feature requires external API credentials, ask for the necessary authorization.
+- If a feature is too large, implement it in working stages.
+- Report honestly which features are complete and which require configuration.
+
+FINAL PROJECT GOAL:
+
+ANURAG EDUCATION CENTER must become a comprehensive Indian educational platform where every student can register with a real email, create a personal account, prepare for government examinations, study SSC CHSL subjects, ask questions, learn from other students, use an AI teacher, read research articles, take mock tests, create notes, manage files, study Indian law, generate blogs and track their educational progress.
+
+The platform should prioritize accuracy, accessibility, student privacy, reliable educational content and genuine learning outcomes.
+
+Build a professional, scalable and reliable product that can grow to serve students across India.

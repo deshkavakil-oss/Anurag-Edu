@@ -1,0 +1,6 @@
+{
+  "name": "ANURAG EDUCATION CENTER",
+  "description": "India's Complete AI-Powered Education, Government Exam Preparation, Research & Legal Learning Platform — LEARN • RESEARCH • PRACTICE • SUCCEED",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
